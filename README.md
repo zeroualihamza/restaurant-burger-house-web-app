@@ -133,3 +133,33 @@ Password: Admin123
 - Preparing
 - Ready
 - Completed
+
+## Screenshots
+
+### Home
+
+![Home](screenshots/01_home.png)
+
+### Menu
+
+![Menu](screenshots/02_menu.png)
+
+### Register
+
+![Register](screenshots/03_register.png)
+
+### Login
+
+![Login](screenshots/04_login.png)
+
+### Cart
+
+![Cart](screenshots/05_cart.png)
+
+### Order History
+
+![Order History](screenshots/06_order_history.png)
+
+### Admin Orders
+
+![Admin Orders](screenshots/07_admin_orders.png)
