@@ -133,7 +133,3 @@ Password: Admin123
 - Preparing
 - Ready
 - Completed
-
-## Portfolio Summary
-
-This project demonstrates full-stack web development skills with server-side rendering, SQLite database integration, user authentication, shopping cart functionality, order management, and an admin dashboard.
