@@ -1,0 +1,25 @@
+<header class="site-header">
+  <a href="/" class="logo">Burger House</a>
+
+  <nav>
+    <a href="/">Home</a>
+
+    {{#if user}}
+      {{#if isAdmin}}
+        <a href="/admin/orders">Admin</a>
+      {{else}}
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart</a>
+        <a href="/orders">Orders</a>
+      {{/if}}
+
+      <form class="logout-form" action="/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+    {{else}}
+      <a href="/menu">Menu</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    {{/if}}
+  </nav>
+</header>

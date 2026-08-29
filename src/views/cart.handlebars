@@ -1,0 +1,32 @@
+<section class="page-section">
+  <div class="section-heading">
+    <p class="eyebrow">Your cart</p>
+    <h1>Review your order</h1>
+  </div>
+
+  {{#if cartItems.length}}
+    <div class="cart-list">
+      {{#each cartItems}}
+        <article class="cart-item">
+          <img src="{{image}}" alt="{{name}}">
+          <div>
+            <h2>{{name}}</h2>
+            <p>{{description}}</p>
+            <p>Quantity: {{quantity}}</p>
+          </div>
+          <strong>${{subtotal}}</strong>
+        </article>
+      {{/each}}
+    </div>
+
+    <div class="cart-summary">
+      <h2>Total: ${{total}}</h2>
+      <form action="/orders" method="POST">
+        <button class="btn" type="submit">Place order</button>
+      </form>
+    </div>
+  {{else}}
+    <p>Your cart is empty.</p>
+    <a href="/menu" class="btn">Back to menu</a>
+  {{/if}}
+</section>

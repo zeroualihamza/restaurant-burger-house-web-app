@@ -1,0 +1,24 @@
+<section class="page-section">
+  <div class="section-heading">
+    <p class="eyebrow">Order history</p>
+    <h1>Your orders</h1>
+  </div>
+
+  {{#if orders.length}}
+    <div class="order-list">
+      {{#each orders}}
+        <article class="order-card">
+          <div>
+            <h2>Order #{{id}}</h2>
+            <p>Status: {{status}}</p>
+            <p>Date: {{created_at}}</p>
+          </div>
+          <strong>${{total}}</strong>
+        </article>
+      {{/each}}
+    </div>
+  {{else}}
+    <p>You do not have any orders yet.</p>
+    <a href="/menu" class="btn">Start an order</a>
+  {{/if}}
+</section>

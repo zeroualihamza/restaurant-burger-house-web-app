@@ -1,0 +1,4 @@
+node_modules/
+.env
+config/restaurant.db
+.DS_Store

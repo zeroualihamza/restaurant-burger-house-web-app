@@ -1,0 +1,38 @@
+<section class="page-section">
+  <div class="section-heading">
+    <p class="eyebrow">Admin dashboard</p>
+    <h1>Manage orders</h1>
+  </div>
+
+  {{#if orders.length}}
+    <div class="admin-table">
+      <div class="admin-row admin-row-head">
+        <span>Order</span>
+        <span>Customer</span>
+        <span>Status</span>
+        <span>Total</span>
+        <span>Update</span>
+      </div>
+
+      {{#each orders}}
+        <div class="admin-row">
+          <span>#{{id}}</span>
+          <span>{{first_name}} {{last_name}}<br>{{email}}</span>
+          <span>{{status}}</span>
+          <span>${{total}}</span>
+          <form action="/admin/orders/{{id}}/status" method="POST">
+            <select name="status">
+              <option value="Order received" {{isSelected "Order received" status}}>Order received</option>
+              <option value="Preparing" {{isSelected "Preparing" status}}>Preparing</option>
+              <option value="Ready" {{isSelected "Ready" status}}>Ready</option>
+              <option value="Completed" {{isSelected "Completed" status}}>Completed</option>
+            </select>
+            <button class="btn-small" type="submit">Save</button>
+          </form>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p>No orders yet.</p>
+  {{/if}}
+</section>

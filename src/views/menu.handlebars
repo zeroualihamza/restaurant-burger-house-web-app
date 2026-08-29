@@ -1,0 +1,26 @@
+<section class="page-section">
+  <div class="section-heading">
+    <p class="eyebrow">Our menu</p>
+    <h1>Choose your burger</h1>
+  </div>
+
+  <div class="product-grid">
+    {{#each products}}
+      <article class="product-card">
+        <img class="product-image" src="{{image}}" alt="{{name}}">
+
+        <div class="product-content">
+          <h2>{{name}}</h2>
+          <p>{{description}}</p>
+
+          <div class="product-footer">
+            <strong>${{price}}</strong>
+            <form action="/cart/add/{{id}}" method="POST">
+              <button class="btn-small" type="submit">Add to cart</button>
+            </form>
+          </div>
+        </div>
+      </article>
+    {{/each}}
+  </div>
+</section>
